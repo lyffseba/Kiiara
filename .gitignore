@@ -1,0 +1,25 @@
+# Logs
+*.log
+backend.log
+frontend.log
+test.log
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Environment
+.env
+.deployment.env
