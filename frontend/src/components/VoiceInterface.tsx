@@ -39,10 +39,10 @@ export default function VoiceInterface() {
       {/* Voice Interface Container */}
       <div className={`flex-1 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden ${isFullscreen ? 'fixed inset-0 z-50 rounded-none' : ''}`}>
         <iframe 
-          src="http://localhost:8080" 
+          src={import.meta.env.VITE_BACKEND_URL || "http://localhost:8080"} 
           className="w-full h-full border-0"
           title="Kiiara Voice Assistant"
-          allow="microphone; camera"
+          allow="microphone; camera; display-capture; autoplay"
         />
       </div>
 
