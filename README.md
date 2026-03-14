@@ -86,24 +86,23 @@ Frontend (React PWA) ↔ Backend (Python ADK Agent) ↔ Gemini Live API
    npm run dev
    ```
 
-## Running the Application
+## Running the Application (Local Testing)
 
-### Start Backend (ADK Web Server)
+1. **Start both servers** from the project root:
+   ```bash
+   ./start.sh
+   ```
+   This starts:
+   - Backend (ADK web server) on http://localhost:8080
+   - Frontend (React dev server) on http://localhost:3000
 
-From the project root:
-```bash
-source backend/venv/bin/activate
-adk web backend --port 8080
-```
+2. **Open in Chromium**: Navigate to http://localhost:3000
 
-### Start Frontend
+3. **Test voice interface**: Click "Voice Assistant" tab (opens ADK UI on port 8080)
 
-From the frontend directory:
-```bash
-npm run dev
-```
+4. **Generate Nostr identity**: Go to Settings → "Generate New Identity"
 
-The frontend will be available at `http://localhost:3000` and will proxy API requests to the backend on port 8080.
+5. **Run financial autoresearch**: Say "Kiiara, optimize my budget" in voice interface
 
 ## Usage
 
