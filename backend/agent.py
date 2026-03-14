@@ -8,6 +8,7 @@ from .tools import (
     get_spending_analysis,
     mock_investment_advice,
     generate_invoice,
+    run_financial_autoresearch,
 )
 
 # Create tool instances
@@ -18,6 +19,7 @@ set_saving_goal_tool = FunctionTool(set_saving_goal)
 get_spending_analysis_tool = FunctionTool(get_spending_analysis)
 mock_investment_advice_tool = FunctionTool(mock_investment_advice)
 generate_invoice_tool = FunctionTool(generate_invoice)
+run_financial_autoresearch_tool = FunctionTool(run_financial_autoresearch)
 
 # Define the Kiiara agent
 kiiara_agent = Agent(
@@ -40,6 +42,7 @@ Your capabilities:
 - Offer investment advice based on risk tolerance
 - Generate invoices for freelance work
 - Help with budget planning
+- Run autonomous financial research to optimize strategies (autoresearch)
 
 When users share financial information:
 1. Listen carefully and acknowledge their concerns
@@ -58,6 +61,7 @@ Remember, you're not just a financial advisor - you're a caring companion who wa
         get_spending_analysis_tool,
         mock_investment_advice_tool,
         generate_invoice_tool,
+        run_financial_autoresearch_tool,
     ],
 )
 

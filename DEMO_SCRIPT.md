@@ -18,7 +18,7 @@
 - **Audio**: "Your decentralized Nostr identity ensures secure, private interactions. Your keys never leave your device."
 - **Action**: Copy public key to clipboard
 
-## Financial Features Demo (2:00 - 3:00)
+## Financial Features Demo (2:00 - 2:45)
 - **Visual**: Return to Dashboard
 - **Action**: Click "Add Transaction" button, fill form for $2600 salary deposit
 - **Audio**: "Let me help you track your income. Regular salary deposits are the foundation of good budgeting."
@@ -26,7 +26,14 @@
 - **Action**: Click "Pay Bills" quick action, show upcoming bills list
 - **Audio**: "I've reminded you about your upcoming rent and internet bills. Planning ahead prevents late fees."
 
-## Investment & Backup Demo (3:00 - 3:45)
+## Autoresearch Optimization Demo (2:45 - 3:15)
+- **Visual**: Return to Voice Assistant, speak: "Kiiara, run financial autoresearch to optimize my budget."
+- **Action**: Show tool execution logs with optimization iterations
+- **Audio**: "I'm running autonomous research to find the best budget allocation for you. This may take a moment..."
+- **Visual**: Show progress as iterations complete, display best strategy results
+- **Audio**: "Found it! By increasing savings to 25% and optimizing discretionary spending, you could improve your wealth by 15%."
+
+## Investment & Backup Demo (3:15 - 3:45)
 - **Visual**: Navigate to Settings → Financial Integrations
 - **Action**: Show mock connections to Nubank, Revolut, Coinbase
 - **Audio**: "I can connect to your financial accounts for a complete picture. For now, I'm showing demo connections."
@@ -37,7 +44,7 @@
 ## Conclusion (3:45 - 4:00)
 - **Visual**: Return to dashboard, show comprehensive financial overview
 - **Audio**: "Kiiara is your caring financial companion. Voice-first, secure, and always learning. Try it today!"
-- **Text Overlay**: "Install as Chrome App • $9.99/month • Gemini Live Agent Challenge"
+- **Text Overlay**: "Install as Chrome App • $9.99/month • Gemini Live Agent Challenge • Autonomous Financial Research"
 
 ## Technical Notes for Recording
 1. Use screen recording software (OBS, Loom, or QuickTime)

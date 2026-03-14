@@ -2,6 +2,7 @@ from typing import Optional, List, Dict, Any
 import json
 from datetime import datetime, timedelta
 import random
+from .autoresearch_finance import run_autoresearch_demo
 
 
 def add_transaction(
@@ -256,4 +257,51 @@ def generate_invoice(
         "due_date": due_date,
         "status": "draft",
         "created_at": datetime.now().isoformat(),
+    }
+
+
+def run_financial_autoresearch(iterations: int = 5, seed: int = 42) -> Dict[str, Any]:
+    """
+    Run autonomous financial strategy optimization using AI research loop.
+
+    Args:
+        iterations: Number of optimization iterations to run
+        seed: Random seed for reproducibility
+
+    Returns:
+        dict: Optimization results including best strategy and improvement metrics
+    """
+    results = run_autoresearch_demo(iterations=iterations, seed=seed)
+
+    # Format for user-friendly output
+    best_strategy = results["best_strategy"]
+    improvement = results["best_score"] - results["history"][0]["score"]
+
+    # Generate recommendation text
+    rec_parts = []
+    if best_strategy.get("savings", 0) > 0.25:
+        rec_parts.append("increase savings rate")
+    if best_strategy.get("investment", 0) > 0.15:
+        rec_parts.append("boost investments")
+    if any(best_strategy.get(cat, 0) < 0.05 for cat in ["food", "transportation"]):
+        rec_parts.append("optimize discretionary spending")
+
+    recommendation = "Based on autonomous research: " + ", ".join(rec_parts) + "."
+
+    return {
+        "best_strategy": best_strategy,
+        "score": results["best_score"],
+        "improvement": improvement,
+        "iterations": iterations,
+        "total_wealth": results["final_evaluation"]["total_wealth"],
+        "goal_achievement": results["final_evaluation"]["goal_achievement"],
+        "recommendation": recommendation,
+        "optimization_history": [
+            {
+                "iteration": entry["iteration"],
+                "score": entry["score"],
+                "improved": entry["improved"],
+            }
+            for entry in results["history"]
+        ],
     }
