@@ -1,0 +1,28 @@
+2026-03-14 10:44:45,683 - INFO - service_factory.py:266 - Using in-memory memory service
+2026-03-14 10:44:45,684 - INFO - local_storage.py:84 - Using per-agent session storage rooted at /home/sebae/jsgv/pro/lyffseba/Kiiara/backend
+2026-03-14 10:44:45,684 - INFO - local_storage.py:110 - Using file artifact service at /home/sebae/jsgv/pro/lyffseba/Kiiara/backend/.adk/artifacts
+/home/sebae/jsgv/pro/lyffseba/Kiiara/venv/lib/python3.12/site-packages/google/adk/cli/fast_api.py:192: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  credential_service = InMemoryCredentialService()
+/home/sebae/jsgv/pro/lyffseba/Kiiara/venv/lib/python3.12/site-packages/google/adk/auth/credential_service/in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  super().__init__()
+INFO:     Started server process [54709]
+INFO:     Waiting for application startup.
+
++-----------------------------------------------------------------------------+
+| ADK Web Server started                                                      |
+|                                                                             |
+| For local testing, access at http://127.0.0.1:8080.                         |
++-----------------------------------------------------------------------------+
+
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50248 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+
++-----------------------------------------------------------------------------+
+| ADK Web Server shutting down...                                             |
++-----------------------------------------------------------------------------+
+
+INFO:     Application shutdown complete.
+INFO:     Finished server process [54709]
